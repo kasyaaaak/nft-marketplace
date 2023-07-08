@@ -1,0 +1,636 @@
+/*-------------- RESET STYLES --------------*/
+@import url("../css/reset.css");
+
+/*-------------- FONTS --------------*/
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Canela";
+  src: url("../fonts/Canela-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSansPro-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*-------------- STYLES --------------*/
+body {
+  background-color: #090f1d;
+  color: #fffffd;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.filled-button {
+  background: #d6ef0e;
+  color: #1e1e1e;
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 0.3s ease 0s;
+}
+
+.filled-button:hover {
+  box-shadow: #d6ef0e 0px 0px 20px;
+}
+
+.transparent-button {
+  background: transparent;
+  color: #d6ef0e;
+  border-radius: 8px;
+  border: 1px solid #d6ef0e;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 0.3s ease 0s;
+}
+
+.transparent-button:hover {
+  background: #d6ef0e;
+  color: #1e1e1e;
+}
+
+.span-color {
+  color: #d6ef0e;
+}
+
+.content-switches {
+  margin-top: 40px;
+  display: flex;
+  column-gap: 36px;
+  align-items: center;
+}
+
+.content-button {
+  padding: 12px 40px;
+}
+
+.content-link {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fffffd;
+  transition: all 1s ease 0s;
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__list-link {
+  color: #fffffd;
+  opacity: 0.72;
+  margin-right: 40px;
+  transition: all 1s ease 0s;
+}
+
+.nav__list-link--active {
+  color: #fff;
+  opacity: 1;
+  border-bottom: 1px solid #d6ef0e;
+}
+
+.nav__list-link:hover,
+.content-link:hover,
+.assets__link:hover {
+  border-bottom: 1px solid #d6ef0e;
+}
+
+.menu__button {
+  padding: 12px 40px;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 92px 0;
+}
+
+.header__content-box,
+.header__image-box {
+  width: 544px;
+  height: 637px;
+}
+
+.header__content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__content-title {
+  font-family: "Canela";
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.header__content-switches {
+  margin-bottom: 72px;
+}
+
+.header__indicators {
+  display: flex;
+  column-gap: 94px;
+}
+
+.header__incators-box:nth-child(1),
+.header__incators-box:nth-child(2) {
+  padding-right: 28px;
+  border-right: 1px solid #d6ef0e;
+}
+
+.header__indicator-title {
+  font-family: "Canela";
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.header__image-box {
+  position: relative;
+}
+
+.header__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__circle {
+  position: absolute;
+  left: -20px;
+  top: 223px;
+  animation: spin 20s linear 0s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header__bid {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  border-radius: 16px;
+  border-top: 1px solid #d6ef0e;
+  background: #131e3a;
+  box-shadow: 0px 9px 50px 0px rgba(23, 36, 65, 0.04);
+  max-width: 304px;
+}
+
+.header__bid-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.header__bid-textbox:nth-child(2) {
+  text-align: right;
+}
+
+.header__bid-title {
+  color: #d6ef0e;
+}
+
+.bid__timer {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.bid__button {
+  width: 264px;
+  padding: 12px 0;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ARTS */
+
+.arts {
+  padding: 92px 0;
+}
+
+.arts__textbox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.arts__textbox-title {
+  font-size: 48px;
+  font-family: "Canela";
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 506px;
+}
+
+.arts__textbox-button {
+  padding: 12px 40px;
+  width: 134px;
+  height: 52px;
+  align-self: flex-end;
+}
+
+.arts__cardsbox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.art__card {
+  padding: 20px;
+  border-radius: 28px;
+  border-top: 1px solid #d6ef0e;
+  background: #131e3a;
+}
+
+.art__card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.art__card-name {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.art__name-price {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+}
+
+.card__price {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.art__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.art__ending {
+  color: #838382;
+  margin-bottom: 4px;
+}
+
+.art-clock {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.art-time {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.art__button {
+  padding: 12px 40px;
+}
+
+/* ASSETS */
+
+.assets {
+  padding: 92px 0;
+}
+
+.assets__box {
+  display: flex;
+  gap: 124px;
+}
+
+.assets__textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 426px;
+}
+
+.assets__textbox-title {
+  font-family: "Canela";
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.assets__textbox-text {
+  margin-bottom: 40px;
+}
+
+.assets__switchers {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.assets__button {
+  padding: 12px 40px;
+}
+
+.assets__link {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fffffd;
+}
+
+.assets__imagebox {
+  position: relative;
+  width: 740px;
+  height: 559px;
+}
+
+.assets-left-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.assets-right-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* ARTISTS */
+
+.artists {
+  padding: 92px 0;
+}
+
+.artists__textbox {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artists__cardsbox {
+  display: grid;
+  grid-template-columns: 300px 80px 410px 410px;
+  grid-template-rows: repeat(2, 311px);
+  grid-gap: 30px;
+}
+
+.artist__card:nth-child(2) {
+  grid-column: span 2;
+}
+
+.artist__card:nth-child(3) {
+  grid-row: span 2;
+}
+
+.artist__card:nth-child(4) {
+  grid-column: span 2;
+}
+
+.artists__textbox-title {
+  max-width: 307px;
+  font-family: "Canela";
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.button__artists {
+  padding: 12px 40px;
+}
+
+.artist__card {
+  position: relative;
+  cursor: pointer;
+}
+
+.artist-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: 0.5s ease-in-out 0s;
+}
+
+.artist-img:hover {
+  filter: none;
+}
+
+.artist__card-overlay {
+  display: flex;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.card__overlay-textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card__overlay-text {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* SUBSCRIPTION */
+
+.subscription {
+  padding: 92px 0;
+}
+
+.subscription__boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 140px;
+}
+
+.subscription__imagebox {
+  position: relative;
+  height: 458px;
+  width: 630px;
+}
+
+.subscription__img-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.subscription__img-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.subscription__textbox {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subscription__textbox-title {
+  font-size: 48px;
+  font-family: "Canela";
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.subscription__textbox-text {
+  margin-bottom: 40px;
+}
+
+.subscription__textbox-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #131e3a;
+  width: 516px;
+}
+
+.subscription-input {
+  opacity: 0.72;
+  margin: 16px 24px;
+}
+
+.subscription-button {
+  padding: 12px 40px;
+  margin: 4px;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 92px 0;
+}
+
+.footer-link {
+  transition: all 0.4s ease 0s;
+}
+
+.footer-link:hover {
+  color: #d6ef0e;
+}
+
+.footer__mainbox {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18.5px 48px;
+  margin-bottom: 48px;
+  align-items: center;
+  border-bottom: 1px solid #838382;
+}
+
+.footer__mainbox-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 272px;
+  row-gap: 24px;
+}
+
+.footer__icons {
+  display: flex;
+  column-gap: 12px;
+}
+
+.footer__mainbox-menu {
+  display: flex;
+  column-gap: 94px;
+}
+
+.footer__mainbox-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.footer__mainbox-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.footer__copyrightbox {
+  display: flex;
+  padding: 0 18.5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__block {
+  display: flex;
+  column-gap: 28px;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #92ad0a #131e3a;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #131e3a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #92ad0a;
+  border-radius: 10px;
+}
+
